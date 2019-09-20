@@ -38,6 +38,7 @@
 *.jdi
 *.jpg
 # *.mif
+*.cdf
 *.pin
 *.pof
 *.ptf.*
