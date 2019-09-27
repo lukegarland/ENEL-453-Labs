@@ -1,0 +1,52 @@
+{C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity SevenSegment
+-- Compiling architecture Behavioral of SevenSegment
+
+} {} {}} {C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/registers.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/registers.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity registers
+-- Compiling architecture rtl of registers
+
+} {} {}} {C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment_decoder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment_decoder.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity SevenSegment_decoder
+-- Compiling architecture Behavioral of SevenSegment_decoder
+
+} {} {}} {C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/binary_bcd.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/binary_bcd.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity binary_bcd
+-- Compiling architecture behavior of binary_bcd
+
+} {} {}} {C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/averager.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/averager.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity averager
+-- Compiling architecture rtl of averager
+
+} {} {}} {C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/voltmeter.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/voltmeter.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Voltmeter
+-- Compiling architecture Behavioral of Voltmeter
+
+} {} {}}
