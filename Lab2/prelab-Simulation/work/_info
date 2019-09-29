@@ -22,9 +22,9 @@ VB8:2CDW`BR7l1OCmU>8;70
 !s100 SD0FhjE;VVh:AY`^Mm8L61
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1569785370
+Z8 !s110 1569793135
 !i10b 1
-Z9 !s108 1569785370.000000
+Z9 !s108 1569793135.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/averager.vhd|
 Z11 !s107 C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/averager.vhd|
 !i113 1
@@ -103,11 +103,11 @@ Voi=cDXg^hG:lDnFXRmWGZ3
 !s100 QTc_J_@loN^G6JbG4TBe_1
 R7
 32
-Z22 !s110 1569785371
+R8
 !i10b 1
 R9
-Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/registers.vhd|
-Z24 !s107 C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/registers.vhd|
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/registers.vhd|
+Z23 !s107 C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/registers.vhd|
 !i113 1
 R12
 R13
@@ -121,30 +121,30 @@ VPekQcjKOj2ehDXIQNC9^91
 !s100 3^K2_j=ic2=an>bR28X3Y2
 R7
 32
-R22
+R8
 !i10b 1
 R9
+R22
 R23
-R24
 !i113 1
 R12
 R13
 Esevensegment
-Z25 w1569451058
+Z24 w1569451058
 R2
 R3
 R4
-Z26 8C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment.vhd
-Z27 FC:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment.vhd
+Z25 8C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment.vhd
+Z26 FC:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment.vhd
 l0
 L5
 VFQL0l=JL^=MaiIUn`WdFb1
 !s100 FAQQnV:QmAocX2NB>i[z<3
 R7
 32
-R22
+Z27 !s110 1569793136
 !i10b 1
-Z28 !s108 1569785371.000000
+Z28 !s108 1569793136.000000
 Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment.vhd|
 Z30 !s107 C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment.vhd|
 !i113 1
@@ -160,7 +160,7 @@ V2F^Fcf9gjzodgkg_]691i2
 !s100 RiGS?:ZGQAlZ5UmR<S:Kz0
 R7
 32
-R22
+R27
 !i10b 1
 R28
 R29
@@ -181,7 +181,7 @@ VVlW=l2M0eeEbg:dCz4:;@0
 !s100 nVLN]dm0afJ4i1K[@D_Do2
 R7
 32
-R22
+R27
 !i10b 1
 R28
 Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment_decoder.vhd|
@@ -199,7 +199,7 @@ VC?9QIg:<Nc@7LA^50J:Ca0
 !s100 G[]U9WTmdjCPQ770:^Jn=3
 R7
 32
-R22
+R27
 !i10b 1
 R28
 R34
@@ -208,7 +208,7 @@ R35
 R12
 R13
 Etb_voltmeter
-Z36 w1569785351
+Z36 w1569793127
 R1
 R2
 R3
@@ -221,7 +221,7 @@ VPTD5GLQzmEEB8HMG7bG202
 !s100 VKzc44UiGTR3X[Q[cF_6N3
 R7
 32
-R22
+R27
 !i10b 1
 R28
 Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/tb_voltmeter.vhd|
@@ -236,11 +236,11 @@ R3
 Z41 DEx4 work 12 tb_voltmeter 0 22 PTD5GLQzmEEB8HMG7bG202
 l25
 L9
-VlhRJ?_b4_QECaK8XS99W61
-!s100 G2[g1ghCC?kee^CdURW7E0
+VjDkKFdj[G0iHzAVTi=inG0
+!s100 @ZnZne>I68fnfc]XLJCMb0
 R7
 32
-R22
+R27
 !i10b 1
 R28
 R39
@@ -261,7 +261,7 @@ VV@Q5GZFH]EZ[NWnbbL5E<1
 !s100 72N:e;ZbWmel4[3]E_PHT0
 R7
 32
-R22
+R27
 !i10b 1
 R28
 Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/prelab-Simulation/test_ADC.vhd|
@@ -279,7 +279,7 @@ VA8<BNdU5n;R9o1]o8No]E3
 !s100 FeHTfnb>k6a0V3LN0cg8b1
 R7
 32
-R22
+R27
 !i10b 1
 R28
 R45

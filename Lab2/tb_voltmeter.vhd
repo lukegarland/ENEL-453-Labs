@@ -46,8 +46,10 @@ voltmeter_ins: Voltmeter port map(
 	
 	reset_process: process
 	begin
+			reset <= '0';
+			wait for clk_period;
 			reset <= '1';
-			wait for clk_period*2; --hold reset for 2 clock cycles
+			wait for clk_period*4; --hold reset for 4 clock cycles
 			reset <= '0';
 			wait;
 	end process;
