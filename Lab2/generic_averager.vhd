@@ -18,18 +18,35 @@ generic(samples_to_avg : integer := 16);
 
 architecture rtl of generic_averager is
 
+-- Log2 function for calculating bit shift for answer calculation
+-- Source: http://computer-programming-forum.com/42-vhdl/612dc25f85d05e14.htm
+function Log2( input:integer ) return integer is
+	variable temp,log:integer;
+begin
+	temp:=input;
+	log:=0;
+	while (temp /= 0) loop
+		temp:=temp/2;
+		log:=log+1;
+	end loop;
+	
+	return log;
+end function log2; 
+
+
+
+
 -- create a type for an array of registers.
 type reg_array is array (samples_to_avg downto 1) of std_logic_vector(11 downto 0 );
 
 -- declare array of registers 
 signal regs : reg_array;
 --declare temp16 (value after the last 16 inputs have been added together)
-signal tmp16 : std_logic_vector(15 downto 0);
-
+signal tmp16 : 		std_logic_vector(15 downto 0);
 begin
 
 shift_reg : process(clk, reset)
-variable temp_values: integer := 0;
+variable temp_values: 	integer := 0;
 	begin
 		if(reset = '1') then
 			
@@ -60,14 +77,16 @@ variable temp_values: integer := 0;
 		
 		end loop sum_loop;
 		
+		
+		--resize temp_values to get the 16 sample average sum
+		temp_values := (temp_values / samples_to_avg) * 16;
+		
 		-- output pin <= answer
  		tmp16 <= std_logic_vector(to_unsigned(temp_values, tmp16'length));
-		Q <= tmp16(15 downto 4);
+		Q <= std_logic_vector(unsigned(tmp16(15 downto 4)));
 
 			end if;
 		end if;
 	end process shift_reg;
-
-
 
 end rtl;
