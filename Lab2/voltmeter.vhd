@@ -29,7 +29,7 @@ Component SevenSegment is
 			);
 End Component ;
 
-Component test_DE10_Lite is --FOR SIMULATION THIS NEEDS TO BE test_DE10_Lite instead of ADC_Conversion
+Component ADC_Conversion is --FOR SIMULATION THIS NEEDS TO BE test_DE10_Lite instead of ADC_Conversion
     Port( MAX10_CLK1_50      : in STD_LOGIC;
           response_valid_out : out STD_LOGIC;
           ADC_out            : out STD_LOGIC_VECTOR (11 downto 0)
@@ -59,7 +59,10 @@ Component registers is
      );
 END Component;
 
-Component averager is
+
+
+Component generic_averager is
+generic(samples_to_avg : integer);
   port(
     clk, reset : in std_logic;
     Din : in  std_logic_vector(11 downto 0);
@@ -67,6 +70,17 @@ Component averager is
     Q   : out std_logic_vector(11 downto 0)
     );
   end Component;
+  
+  
+                                              
+-- Component averager is
+  -- port(
+    -- clk, reset : in std_logic;
+    -- Din : in  std_logic_vector(11 downto 0);
+    -- EN  : in  std_logic; -- response_valid_out
+    -- Q   : out std_logic_vector(11 downto 0)
+    -- );
+  -- end Component;
 
 begin
    Num_Hex0 <= bcd(3  downto  0); 
@@ -78,8 +92,8 @@ begin
    DP_in    <= "001000";-- position of the decimal point in the display
 
                   
-   
-ave :    averager
+   ave :    generic_averager
+		generic map(samples_to_avg => 16)
          port map(
                   clk       => clk,
                   reset     => reset,
@@ -87,6 +101,15 @@ ave :    averager
                   EN        => response_valid_out_i3(0),
                   Q         => Q_temp1
                   );
+   
+-- ave :    averager
+         -- port map(
+                  -- clk       => clk,
+                  -- reset     => reset,
+                  -- Din       => q_outputs_2,
+                  -- EN        => response_valid_out_i3(0),
+                  -- Q         => Q_temp1
+                  -- );
    
 sync1 : registers 
         generic map(bits => 12)
@@ -144,7 +167,7 @@ SevenSegment_ins: SevenSegment
                             DP_in    => DP_in
                           );
                                      
-ADC_Conversion_ins:  test_DE10_Lite  PORT MAP(      -- THIS NEEDS TO BE ADC_Conversion when not simulating.
+ADC_Conversion_ins:  ADC_Conversion  PORT MAP(      -- THIS NEEDS TO BE ADC_Conversion when not simulating.
                                      MAX10_CLK1_50       => clk,
                                      response_valid_out  => response_valid_out_i1(0),
                                      ADC_out             => ADC_read);
