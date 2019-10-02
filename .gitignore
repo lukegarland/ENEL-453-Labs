@@ -68,8 +68,9 @@ incremental_db/
 db/
 _output_files/
 PLLJ_PLLSPE_INFO.txt
-
+*/AidansTestbenchVoltmeter*
 
 *.pdf
 *.bak
 *.html
+Lab2/Aidan's_tb_voltmeter.vhd
