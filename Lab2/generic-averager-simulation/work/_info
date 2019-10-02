@@ -8,25 +8,25 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/prelab-Simulation
-Egeneric_averager
-Z0 w1569869851
+Eaverager
+Z0 w1569883964
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 Z4 dC:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/generic-averager-simulation
-Z5 8C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/generic_averager.vhd
-Z6 FC:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/generic_averager.vhd
+Z5 8C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/averager.vhd
+Z6 FC:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/averager.vhd
 l0
-L7
-VNWnRPl]=1h=c[imXnGF[93
-!s100 dRd^fJ23Z4Z^<V7^R>HEW3
+L6
+VB8:2CDW`BR7l1OCmU>8;70
+!s100 SD0FhjE;VVh:AY`^Mm8L61
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1569887398
+Z8 !s110 1570041924
 !i10b 1
-Z9 !s108 1569887398.000000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/generic_averager.vhd|
-Z11 !s107 C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/generic_averager.vhd|
+Z9 !s108 1570041924.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/averager.vhd|
+Z11 !s107 C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/averager.vhd|
 !i113 1
 Z12 o-work work -2002 -explicit
 Z13 tExplicit 1 CvgOpt 0
@@ -34,11 +34,11 @@ Artl
 R1
 R2
 R3
-DEx4 work 16 generic_averager 0 22 NWnRPl]=1h=c[imXnGF[93
-l28
-L19
-V15d5i[hc3zBhI:kUT8d1H3
-!s100 ]a@RQknaIO[Ihk9@hJEAo1
+Z14 DEx4 work 8 averager 0 22 B8:2CDW`BR7l1OCmU>8;70
+l21
+L15
+Z15 VG;7@I7_amaWiWHS^mKDW43
+Z16 !s100 YnXhfMY^K8AFmglKzVX2T2
 R7
 32
 R8
@@ -49,14 +49,55 @@ R11
 !i113 1
 R12
 R13
-Etb_generic_averager
-Z14 w1569887382
+Egeneric_averager
+Z17 w1570041746
 R1
 R2
 R3
 R4
-Z15 8C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/tb_generic_averager.vhd
-Z16 FC:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/tb_generic_averager.vhd
+Z18 8C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/generic_averager.vhd
+Z19 FC:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/generic_averager.vhd
+l0
+L7
+VNWnRPl]=1h=c[imXnGF[93
+!s100 dRd^fJ23Z4Z^<V7^R>HEW3
+R7
+32
+R8
+!i10b 1
+R9
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/generic_averager.vhd|
+Z21 !s107 C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/generic_averager.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 16 generic_averager 0 22 NWnRPl]=1h=c[imXnGF[93
+l28
+L19
+VhA49IO@8`0R98`OdY[IU:2
+!s100 VD7NA?bmRRB6cC:O;PcXC1
+R7
+32
+R8
+!i10b 1
+R9
+R20
+R21
+!i113 1
+R12
+R13
+Etb_generic_averager
+Z22 w1570041920
+R1
+R2
+R3
+R4
+Z23 8C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/tb_generic_averager.vhd
+Z24 FC:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/tb_generic_averager.vhd
 l0
 L6
 VRG5VC@JCKQ:GDc4e7NHao2
@@ -66,8 +107,8 @@ R7
 R8
 !i10b 1
 R9
-Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/tb_generic_averager.vhd|
-Z18 !s107 C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/tb_generic_averager.vhd|
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/tb_generic_averager.vhd|
+Z26 !s107 C:/Users/lukeg/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/tb_generic_averager.vhd|
 !i113 1
 R12
 R13
@@ -75,18 +116,18 @@ Atb_behaviour
 R1
 R2
 R3
-Z19 DEx4 work 19 tb_generic_averager 0 22 RG5VC@JCKQ:GDc4e7NHao2
+DEx4 work 19 tb_generic_averager 0 22 RG5VC@JCKQ:GDc4e7NHao2
 l30
 L9
-V<IY@S^k8lO[3<4=S?K^XC1
-!s100 =IebV6bE7DYn[<bLdV7FK1
+V?7SomSL3H8clTlWh>llS03
+!s100 P8^acjgc@fXXU:[5lG4bc1
 R7
 32
 R8
 !i10b 1
 R9
-R17
-R18
+R25
+R26
 !i113 1
 R12
 R13

@@ -29,7 +29,7 @@ Signal	 Q     : std_logic_vector(11 downto 0);
 constant clk_period : time := 10 ns;
 begin 
 UUT: generic_averager 
-generic map (samples_to_avg => 32)
+generic map (samples_to_avg => 16)
 port map
 			(
 				clk 	=> clk,
@@ -62,7 +62,7 @@ port map
 	begin
 			--cycle through data inputs of 0 to 15
 			--true average is 7.5
-			
+
 			if (data_in = 16) then 
 			data_in := 0;
 			end if;

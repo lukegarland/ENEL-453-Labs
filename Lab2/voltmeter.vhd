@@ -108,7 +108,7 @@ begin
 
                   
    ave :    generic_averager
-		generic map(samples_to_avg =>16)
+		generic map(samples_to_avg =>128)
          port map(
                   clk       => clk,
                   reset     => reset,

@@ -53,6 +53,7 @@ variable temp_values: 	integer := 0;
 					
 			-- start loop to add all registers together
 			temp_values := 0;
+			
 			sum_loop : for i in 1 to samples_to_avg loop
 		
 			temp_values := temp_values + to_integer(unsigned(regs(i)));
@@ -61,11 +62,11 @@ variable temp_values: 	integer := 0;
 		
 		
 		--resize temp_values to get the 16 sample average sum
-		temp_values := (temp_values / samples_to_avg) * 16;
+		temp_values := (temp_values / samples_to_avg);
 		
 		-- output pin <= answer
- 		tmp16 <= std_logic_vector(to_unsigned(temp_values, tmp16'length));
-		Q <= std_logic_vector(unsigned(tmp16(15 downto 4)));
+ 		-- tmp16 <= std_logic_vector(to_unsigned(temp_values, tmp16'length));
+		Q <= std_logic_vector(to_unsigned(temp_values, Q'length));
 
 			end if;
 		end if;

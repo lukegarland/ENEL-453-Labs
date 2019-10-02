@@ -358,5 +358,5 @@ set_global_assignment -name QIP_FILE adc_qsys/synthesis/adc_qsys.qip
 set_global_assignment -name VHDL_FILE voltmeter.vhd
 set_global_assignment -name VHDL_FILE Multiplexor.vhd
 set_global_assignment -name VHDL_FILE tb_Multiplexor.vhd
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VHDL_FILE Aidan's_tb_voltmeter.vhd
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
