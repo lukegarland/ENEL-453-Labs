@@ -1,0 +1,371 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/AidansTestbenchVoltmeter
+Ebinary_bcd
+Z0 w1569614897
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/FinalProject-Simulation
+Z5 8C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/binary_bcd.vhd
+Z6 FC:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/binary_bcd.vhd
+l0
+L8
+Vo<z`d6o]a?hb2:1^mkKIJ0
+!s100 Ai7<aVU>PmVj]f3eOfUVA0
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1570048052
+!i10b 1
+Z9 !s108 1570048052.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/binary_bcd.vhd|
+Z11 !s107 C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/binary_bcd.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavior
+R1
+R2
+R3
+DEx4 work 10 binary_bcd 0 22 o<z`d6o]a?hb2:1^mkKIJ0
+l30
+L19
+VD;;?JKhcFn293?b44B]hE0
+!s100 VS>UdhPb1_VAG?=`hPclj3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Egeneric_averager
+Z14 w1569862584
+R1
+R2
+R3
+R4
+Z15 8C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/generic_averager.vhd
+Z16 FC:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/generic_averager.vhd
+l0
+L7
+VNWnRPl]=1h=c[imXnGF[93
+!s100 dRd^fJ23Z4Z^<V7^R>HEW3
+R7
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/generic_averager.vhd|
+Z18 !s107 C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/generic_averager.vhd|
+!i113 1
+R12
+R13
+Artl
+R1
+R2
+R3
+DEx4 work 16 generic_averager 0 22 NWnRPl]=1h=c[imXnGF[93
+l28
+L19
+V15d5i[hc3zBhI:kUT8d1H3
+!s100 ]a@RQknaIO[Ihk9@hJEAo1
+R7
+32
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Emultiplexor
+Z19 w1569887469
+R1
+R2
+R3
+R4
+Z20 8C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/Multiplexor.vhd
+Z21 FC:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/Multiplexor.vhd
+l0
+L6
+V?Gj49je8nmQb^SKH;HZkc0
+!s100 Klf>`3?OM<KQ9omWK1QnH0
+R7
+32
+R8
+!i10b 1
+R9
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/Multiplexor.vhd|
+Z23 !s107 C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/Multiplexor.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R1
+R2
+R3
+DEx4 work 11 multiplexor 0 22 ?Gj49je8nmQb^SKH;HZkc0
+l16
+L15
+VJKRCVbV3UMXQ1gWC6ISIM2
+!s100 fLGAPfL69UBjGBzPk<Ie81
+R7
+32
+R8
+!i10b 1
+R9
+R22
+R23
+!i113 1
+R12
+R13
+Eregisters
+R0
+R2
+R3
+R4
+Z24 8C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/registers.vhd
+Z25 FC:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/registers.vhd
+l0
+L4
+Voi=cDXg^hG:lDnFXRmWGZ3
+!s100 QTc_J_@loN^G6JbG4TBe_1
+R7
+32
+R8
+!i10b 1
+R9
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/registers.vhd|
+Z27 !s107 C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/registers.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+DEx4 work 9 registers 0 22 oi=cDXg^hG:lDnFXRmWGZ3
+l18
+L17
+VPekQcjKOj2ehDXIQNC9^91
+!s100 3^K2_j=ic2=an>bR28X3Y2
+R7
+32
+R8
+!i10b 1
+R9
+R26
+R27
+!i113 1
+R12
+R13
+Esevensegment
+R0
+R2
+R3
+R4
+Z28 8C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment.vhd
+Z29 FC:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment.vhd
+l0
+L5
+VFQL0l=JL^=MaiIUn`WdFb1
+!s100 FAQQnV:QmAocX2NB>i[z<3
+R7
+32
+Z30 !s110 1570048053
+!i10b 1
+Z31 !s108 1570048053.000000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment.vhd|
+Z33 !s107 C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+DEx4 work 12 sevensegment 0 22 FQL0l=JL^=MaiIUn`WdFb1
+l20
+L11
+V2F^Fcf9gjzodgkg_]691i2
+!s100 RiGS?:ZGQAlZ5UmR<S:Kz0
+R7
+32
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R12
+R13
+Esevensegment_decoder
+R0
+R2
+R3
+R4
+Z34 8C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment_decoder.vhd
+Z35 FC:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment_decoder.vhd
+l0
+L5
+VVlW=l2M0eeEbg:dCz4:;@0
+!s100 nVLN]dm0afJ4i1K[@D_Do2
+R7
+32
+R30
+!i10b 1
+R31
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment_decoder.vhd|
+Z37 !s107 C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/SevenSegment_decoder.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+DEx4 work 20 sevensegment_decoder 0 22 VlW=l2M0eeEbg:dCz4:;@0
+l14
+L13
+VC?9QIg:<Nc@7LA^50J:Ca0
+!s100 G[]U9WTmdjCPQ770:^Jn=3
+R7
+32
+R30
+!i10b 1
+R31
+R36
+R37
+!i113 1
+R12
+R13
+Etb_voltmeter
+Z38 w1570047643
+R1
+R2
+R3
+R4
+Z39 8C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/tb_voltmeter.vhd
+Z40 FC:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/tb_voltmeter.vhd
+l0
+L6
+VPTD5GLQzmEEB8HMG7bG202
+!s100 VKzc44UiGTR3X[Q[cF_6N3
+R7
+32
+R30
+!i10b 1
+R31
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/tb_voltmeter.vhd|
+Z42 !s107 C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/tb_voltmeter.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 12 tb_voltmeter 0 22 PTD5GLQzmEEB8HMG7bG202
+l28
+L9
+V^<8=jYG5O<M>n`>U_9AB>3
+!s100 KP@5OJm=`nGob7DAaO9VC0
+R7
+32
+R30
+!i10b 1
+R31
+R41
+R42
+!i113 1
+R12
+R13
+Etest_de10_lite
+Z43 w1569794204
+R2
+R3
+R4
+Z44 8C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/prelab-Simulation/test_ADC.vhd
+Z45 FC:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/prelab-Simulation/test_ADC.vhd
+l0
+L6
+VV@Q5GZFH]EZ[NWnbbL5E<1
+!s100 72N:e;ZbWmel4[3]E_PHT0
+R7
+32
+Z46 !s110 1570048054
+!i10b 1
+R31
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/prelab-Simulation/test_ADC.vhd|
+Z48 !s107 C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/prelab-Simulation/test_ADC.vhd|
+!i113 1
+R12
+R13
+Abehavior
+R2
+R3
+DEx4 work 14 test_de10_lite 0 22 V@Q5GZFH]EZ[NWnbbL5E<1
+l15
+L12
+VA8<BNdU5n;R9o1]o8No]E3
+!s100 FeHTfnb>k6a0V3LN0cg8b1
+R7
+32
+R46
+!i10b 1
+R31
+R47
+R48
+!i113 1
+R12
+R13
+Evoltmeter
+Z49 w1570047582
+R1
+R2
+R3
+R4
+Z50 8C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/voltmeter.vhd
+Z51 FC:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/voltmeter.vhd
+l0
+L5
+V7K>_8QcBA?HMI@8XmkVhe0
+!s100 UJ^eTfOSzKo_jhfzXRP0<1
+R7
+32
+R30
+!i10b 1
+R31
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/voltmeter.vhd|
+Z53 !s107 C:/Users/aidan/OneDrive - University of Calgary/ENEL 453/ENEL-453-Labs/Lab2/voltmeter.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 9 voltmeter 0 22 7K>_8QcBA?HMI@8XmkVhe0
+l100
+L15
+VP5]i=ioYf=37<QH@^zGIQ1
+!s100 k]8EceGJLS1adSBCe>Mz53
+R7
+32
+R30
+!i10b 1
+R31
+R52
+R53
+!i113 1
+R12
+R13

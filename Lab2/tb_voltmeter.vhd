@@ -11,7 +11,7 @@ architecture Behavioral of tb_voltmeter is
 component voltmeter is 
     Port ( clk                           : in  STD_LOGIC;
            reset                         : in  STD_LOGIC;
-			  selectSig							  : in STD_LOGIC
+			  selectSig							  : in STD_LOGIC;
            LEDR                          : out STD_LOGIC_VECTOR (9 downto 0);
            HEX0,HEX1,HEX2,HEX3,HEX4,HEX5 : out STD_LOGIC_VECTOR (7 downto 0)
           );
