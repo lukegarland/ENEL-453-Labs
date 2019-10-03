@@ -39,9 +39,9 @@ multiplexor_ins: Multiplexor port map(
 	select_process: process
 	begin
 			selectLine <= '0';
-			wait for 50 ns;
+			wait for 500 ns;
 			selectLine <= '1';
-			wait for 100 ns;
+			wait for 1000 ns;
 	end process;
 
 	
