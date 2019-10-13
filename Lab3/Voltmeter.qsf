@@ -1,12 +1,12 @@
 # -------------------------------------------------------------------------- #
 #
 # Copyright (C) 2018  Intel Corporation. All rights reserved.
-# Your use of Intel Corporation's design tools, logic functions
-# and other software and tools, and its AMPP partner logic
-# functions, and any output files from any of the foregoing
-# (including device programming or simulation files), and any
-# associated documentation or information are expressly subject
-# to the terms and conditions of the Intel Program License
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
 # Subscription Agreement, the Intel Quartus Prime License Agreement,
 # the Intel FPGA IP License Agreement, or other applicable license
 # agreement, including, without limitation, that your use is for
@@ -349,9 +349,6 @@ set_location_assignment PIN_AA20 -to ARDUINO_IO[15]
 set_location_assignment PIN_F16 -to ARDUINO_RESET_N
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name SOURCE_FILE Voltmeter.qsf
-set_global_assignment -name SOURCE_FILE DE10_LITE.qsf
 set_global_assignment -name VHDL_FILE tb_generic_averager.vhd
 set_global_assignment -name VHDL_FILE generic_averager.vhd
 set_global_assignment -name VHDL_FILE tb_voltmeter.vhd
@@ -366,4 +363,5 @@ set_global_assignment -name VHDL_FILE SevenSegment.vhd
 set_global_assignment -name VHDL_FILE registers.vhd
 set_global_assignment -name VHDL_FILE binary_bcd.vhd
 set_global_assignment -name VHDL_FILE averager.vhd
+set_global_assignment -name OPTIMIZATION_MODE BALANCED
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
