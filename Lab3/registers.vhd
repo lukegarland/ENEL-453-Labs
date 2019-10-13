@@ -21,11 +21,12 @@ end entity;
 architecture rtl of registers is
 begin
 
-   process (clk, reset)
+   process (clk)
    begin
-      if reset = '1' then
-		   q_outputs <= (others=>'0');
-		elsif (rising_edge(clk)) then
+		if (rising_edge(clk)) then
+		   if reset = '1' then
+				q_outputs <= (others=>'0');
+			end if;
 		   if (enable = '1') then
             q_outputs <= d_inputs;
 			end if;
