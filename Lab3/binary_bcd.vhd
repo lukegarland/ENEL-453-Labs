@@ -19,7 +19,7 @@ END binary_bcd;
 ARCHITECTURE behavior OF binary_bcd IS
 type statetype is (S0,S1,S2,S3,S4,S5,s6);
 signal CurentState: statetype:=S0;
-signal NextState: statetype;
+signal NextState: statetype:=S1;
 Signal   counter:STD_LOGIC_VECTOR(3 downto 0):=(others=>'0');
 Signal   counter_2: integer:=0;
 Signal   bcd_signal:  unsigned(28 DOWNTO 0):=(others=>'0');    -- 28 _ _ 25    24 _ _ 21    20 _ _ 17    16 _ _ 13    12 _ _ _ _ _ _ _ _ _ _ _ 0 

@@ -179,7 +179,7 @@ ADC_Conversion_ins:  ADC_Conversion  PORT MAP(      -- THIS NEEDS TO BE ADC_Conv
                                      response_valid_out  => response_valid_out_i1(0),
                                      ADC_out             => ADC_read);
  
-LEDR(9 downto 0) <=mux_out(11 downto 2); -- gives visual display of upper binary bits to the LEDs on board
+LEDR(9 downto 0) <= mux_out(11 downto 2); -- gives visual display of upper binary bits to the LEDs on board
 
 -- in line below, can change the scaling factor (i.e. 2500), to calibrate the voltage reading to a reference voltmeter
 voltage <= std_logic_vector(resize(unsigned(mux_out)*2500*2/4096,voltage'length));  -- Converting ADC_read a 12 bit binary to voltage readable numbers
