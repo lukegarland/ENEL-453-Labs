@@ -1,6 +1,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
+--The problem with the reset in this file was that this reset is asynchronous so the reset signals needs to be included in the process list
+-- as it is constantly checking to see if needs to be reset or if it is spposed to be synchronous then the if reset = '1' then and the line underneath
+-- should be under the rising CLK edge code.
+
 entity registers is
 
 generic(bits : integer := 1);
@@ -17,7 +21,7 @@ end entity;
 architecture rtl of registers is
 begin
 
-   process (clk)
+   process (clk, reset)
    begin
       if reset = '1' then
 		   q_outputs <= (others=>'0');

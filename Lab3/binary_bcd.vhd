@@ -28,8 +28,8 @@ Constant add3_2digit: unsigned(28 DOWNTO 0):="00000011000000000000000000000";
 Constant add3_3digit: unsigned(28 DOWNTO 0):="00110000000000000000000000000";
 
 begin
-bcd_process: process (reset, clk)
-variable nextstate: statetype;
+bcd_process: process (reset)
+variable NextState: statetype;
 begin
       if (reset='1') then
          bcd<= (others=>'0');
@@ -37,7 +37,7 @@ begin
          counter_2<=0;
          counter<=(others=>'0');
          busy<='1';
-      elsif (rising_edge(clk)) then
+		else
                Case CurentState is
                   when S0 =>
                               bcd_signal(12 DOWNTO 0)<=UNSIGNED(binary);
@@ -86,9 +86,15 @@ begin
                               counter_2<=0;
                               bcd_signal<=(others=>'0');
                End Case;
-               CurentState<=NextState;
        end if;
 end process;
-   
+
+synchronousTransitionProcess : process (CLK)
+variable NextState: statetype;
+begin
+	if (rising_edge(clk)) then
+		CurentState <= NextState;
+	end if;
+end process;
 
 end behavior;
