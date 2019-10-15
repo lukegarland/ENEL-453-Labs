@@ -14,8 +14,8 @@ end Multiplexor;
 
 architecture BEHAVIOR of Multiplexor is
 	begin
-	
-		muxOutput <= input1 when selectLine = '0'
-					 else input2 when selectLine = '1';
+		with selectLine select
+			muxOutput <= 	input1 when '0',
+							input2 when '1';
 					 
 end BEHAVIOR;
