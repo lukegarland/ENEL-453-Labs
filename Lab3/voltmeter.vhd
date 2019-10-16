@@ -17,11 +17,11 @@ architecture Behavioral of Voltmeter is
 Signal A, Num_Hex0, Num_Hex1, Num_Hex2, Num_Hex3, Num_Hex4, Num_Hex5 :   STD_LOGIC_VECTOR (3 downto 0):= (others=>'0');   
 Signal DP_in:   STD_LOGIC_VECTOR (5 downto 0);
 Signal ADC_read,rsp_data,q_outputs_1,q_outputs_2 : STD_LOGIC_VECTOR (11 downto 0);
-Signal voltage: STD_LOGIC_VECTOR (12 downto 0);
+Signal voltage,  mux_out: STD_LOGIC_VECTOR (12 downto 0);
 Signal busy: STD_LOGIC;
 signal response_valid_out_i1,response_valid_out_i2,response_valid_out_i3 : STD_LOGIC_VECTOR(0 downto 0);
 Signal bcd: STD_LOGIC_VECTOR(15 DOWNTO 0);
-Signal Q_temp1, mux_out : std_logic_vector(11 downto 0);
+Signal Q_temp1 : std_logic_vector(11 downto 0);
 Signal distance_output: std_logic_vector(12 downto 0);
 
 Component SevenSegment is
@@ -79,9 +79,9 @@ generic(samples_to_avg : integer);
 Component Multiplexor is
 	port(
 	 selectLine : in std_logic;
-	 input1 : in std_logic_vector(11 downto 0);
-	 input2 : in std_logic_vector(11 downto 0);
-	 muxOutput : out std_logic_vector(11 downto 0)
+	 input1 : in std_logic_vector(12 downto 0);
+	 input2 : in std_logic_vector(12 downto 0);
+	 muxOutput : out std_logic_vector(12 downto 0)
 	 );
   end component;
 
@@ -100,18 +100,20 @@ begin
    Num_Hex2 <= bcd(11 downto  8);
    
 
-	Num_Hex3 <=  "1111" when bcd(15 downto 12) = "0000"
+	Num_Hex3 <=  "1111" when (bcd(15 downto 12) = "0000" and selectSig = '1' )
 		else 	bcd(15 downto 12) ;
 	
 	
 	
    Num_Hex4 <= "1111";  -- blank this display
    Num_Hex5 <= "1111";  -- blank this display   
-   DP_in    <= "000100";-- position of the decimal point in the display
+   
+   DP_in    <=  "000100" when selectSig = '1' else 
+				"001000";-- position of the decimal point in the display
 
                   
    ave :    generic_averager
-		generic map(samples_to_avg =>128)
+		generic map(samples_to_avg =>256)
          port map(
                   clk       => clk,
                   reset     => reset,
@@ -125,8 +127,8 @@ begin
 mult : multiplexor
 		  port map(
 					  selectLine => selectSig,
-					  input1	    => Q_temp1,
-					  input2     => q_outputs_2,
+					  input1	 => voltage,
+					  input2     => distance_output,
 					  muxOutput  => mux_out
 					  );
 					  
@@ -201,17 +203,17 @@ Port Map (
 			distance 	=>		distance_output
 );
  
-LEDR(9 downto 0) <= mux_out(11 downto 2); -- gives visual display of upper binary bits to the LEDs on board
+LEDR(9 downto 0) <= Q_temp1(11 downto 2); -- gives visual display of upper binary bits to the LEDs on board
 
 -- in line below, can change the scaling factor (i.e. 2500), to calibrate the voltage reading to a reference voltmeter
-voltage <= std_logic_vector(resize(unsigned(mux_out)*2500*2/4096,voltage'length));  -- Converting ADC_read a 12 bit binary to voltage readable numbers
+voltage <= std_logic_vector(resize(unsigned(Q_temp1)*2500*2/4096,voltage'length));  -- Converting ADC_read a 12 bit binary to voltage readable numbers
 
 binary_bcd_ins: binary_bcd                               
    PORT MAP(
       clk      => clk,                          
       reset    => reset,                                 
       ena      => '1',                           
-      binary   => distance_output,    
+      binary   => mux_out,    
       busy     => busy,                         
       bcd      => bcd         
       );
