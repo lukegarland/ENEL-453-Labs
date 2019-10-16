@@ -22,7 +22,7 @@ Signal busy: STD_LOGIC;
 signal response_valid_out_i1,response_valid_out_i2,response_valid_out_i3 : STD_LOGIC_VECTOR(0 downto 0);
 Signal bcd: STD_LOGIC_VECTOR(15 DOWNTO 0);
 Signal Q_temp1, mux_out : std_logic_vector(11 downto 0);
-
+Signal distance_output: std_logic_vector(12 downto 0);
 
 Component SevenSegment is
     Port( Num_Hex0,Num_Hex1,Num_Hex2,Num_Hex3,Num_Hex4,Num_Hex5 : in  STD_LOGIC_VECTOR (3 downto 0);
@@ -85,20 +85,33 @@ Component Multiplexor is
 	 );
   end component;
 
-                         
+component voltage2distance is
+	port(
+			clk            :  IN    STD_LOGIC;                                
+			reset          :  IN    STD_LOGIC;                                
+			voltage        :  IN    STD_LOGIC_VECTOR(12 DOWNTO 0);                           
+			distance       :  OUT   STD_LOGIC_VECTOR(12 DOWNTO 0)
+	);
+	end component;
 
 begin
    Num_Hex0 <= bcd(3  downto  0); 
    Num_Hex1 <= bcd(7  downto  4);
    Num_Hex2 <= bcd(11 downto  8);
-   Num_Hex3 <= bcd(15 downto 12);
+   
+
+	Num_Hex3 <=  "1111" when bcd(15 downto 12) = "0000"
+		else 	bcd(15 downto 12) ;
+	
+	
+	
    Num_Hex4 <= "1111";  -- blank this display
    Num_Hex5 <= "1111";  -- blank this display   
-   DP_in    <= "001000";-- position of the decimal point in the display
+   DP_in    <= "000100";-- position of the decimal point in the display
 
                   
    ave :    generic_averager
-		generic map(samples_to_avg =>8)
+		generic map(samples_to_avg =>128)
          port map(
                   clk       => clk,
                   reset     => reset,
@@ -179,6 +192,15 @@ ADC_Conversion_ins:  ADC_Conversion  PORT MAP(      -- THIS NEEDS TO BE ADC_Conv
                                      response_valid_out  => response_valid_out_i1(0),
                                      ADC_out             => ADC_read);
  
+ 
+voltage2distance_ins: voltage2distance
+Port Map (
+			clk			=>   	clk,                 
+			reset       =>      reset,     
+			voltage 	=>		voltage,
+			distance 	=>		distance_output
+);
+ 
 LEDR(9 downto 0) <= mux_out(11 downto 2); -- gives visual display of upper binary bits to the LEDs on board
 
 -- in line below, can change the scaling factor (i.e. 2500), to calibrate the voltage reading to a reference voltmeter
@@ -189,7 +211,7 @@ binary_bcd_ins: binary_bcd
       clk      => clk,                          
       reset    => reset,                                 
       ena      => '1',                           
-      binary   => voltage,    
+      binary   => distance_output,    
       busy     => busy,                         
       bcd      => bcd         
       );
