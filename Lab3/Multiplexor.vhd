@@ -16,6 +16,6 @@ architecture BEHAVIOR of Multiplexor is
 	begin
 		with selectLine select
 			muxOutput <= 	input1 when '0',
-							input2 when '1';
+							input2 when others;
 					 
 end BEHAVIOR;
