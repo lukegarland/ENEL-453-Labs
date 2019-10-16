@@ -64,7 +64,7 @@ voltmeter_ins: Voltmeter port map(
 			selectSig <= '0';
 			wait for 50 ns;
 			selectSig <= '1';
-			wait for 100 ns;
+			wait for 1000 ns;
 	end process;
 	
 end Behavioral;
