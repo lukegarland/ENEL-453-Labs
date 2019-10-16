@@ -44,12 +44,20 @@ constant v2d_LUT : array_1d := (
 
 );
 
+constant AllOnes : STD_LOGIC_VECTOR(12 DOWNTO 0) := "1111111111111";
 
 begin
    -- This is the only statement required. It looks up the converted value of 
 	-- the voltage input (in mV) in the v2d_LUT look-up table, and outputs the 
 	-- distance (in 10^-4 m) in std_logic_vector format.
-    	
-   distance <= std_logic_vector(to_unsigned(v2d_LUT(to_integer(unsigned(voltage))),distance'length));
+	
+   process(voltage) --This process is checking if the value is in the correct bounds
+	begin
+		if(to_integer(unsigned(voltage)) >= 3299 or to_integer(unsigned(voltage)) <= 400) then
+				distance <= AllOnes;
+		else
+				distance <= std_logic_vector(to_unsigned(v2d_LUT(to_integer(unsigned(voltage))),distance'length));
+		end if;
+	end process;
 
 end behavior;

@@ -25,6 +25,11 @@ begin
          when "0111" => H(6 downto 0)<="1111000"; -- 7
          when "1000" => H(6 downto 0)<="0000000"; -- 8
          when "1001" => H(6 downto 0)<="0011000"; -- 9
+			
+			when "1010" => H(6 downto 0)<="0000110"; -- E
+         when "1011" => H(6 downto 0)<="0101111"; -- r
+         when "1100" => H(6 downto 0)<="0100011"; -- o
+ 
          When others => H(6 downto 0)<="1111111"; -- blank display
       End Case;
    End Process;

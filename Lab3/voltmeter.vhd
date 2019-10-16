@@ -95,25 +95,51 @@ component voltage2distance is
 	end component;
 
 begin
-   Num_Hex0 <= bcd(3  downto  0); 
-   Num_Hex1 <= bcd(7  downto  4);
-   Num_Hex2 <= bcd(11 downto  8);
-   
 
-	Num_Hex3 <=  "1111" when (bcd(15 downto 12) = "0000" and selectSig = '1' )
-		else 	bcd(15 downto 12) ;
+
+error_message: process(bcd, selectSig)
+begin 
+	if (to_integer(unsigned(bcd)) = 33169) then --33169 is the 8191 in BCD which the number for the error
 	
-	
-	
-   Num_Hex4 <= "1111";  -- blank this display
+	Num_Hex0 <= "1011"; 
+   Num_Hex1 <= "1100";
+   Num_Hex2 <= "1011";
+	Num_Hex3 <= "1011";
+   Num_Hex4 <= "1010";  -- blank this display
    Num_Hex5 <= "1111";  -- blank this display   
-   
-   DP_in    <=  "000100" when selectSig = '1' else 
-				"001000";-- position of the decimal point in the display
+   DP_in <=  "000000";
+
+	else
+	
+		Num_Hex0 <= bcd(3  downto  0); 
+		Num_Hex1 <= bcd(7  downto  4);
+		Num_Hex2 <= bcd(11 downto  8);
+	
+		if(bcd(15 downto 12) = "0000" and selectSig = '0' ) then
+			Num_Hex3 <= "1111";
+		else 	
+			Num_Hex3 <= bcd(15 downto 12);
+		end if;
+	
+		Num_Hex4 <= "1111";  -- blank this display
+		Num_Hex5 <= "1111";  -- blank this display  
+	
+		if (selectSig = '0') then
+			DP_in <=  "000100";
+		else 
+			DP_in <= "001000";-- position of the decimal point in the display
+		end if;
+	
+	end if;
+	
+
+end process error_message;
+
+
 
                   
    ave :    generic_averager
-		generic map(samples_to_avg =>256)
+		generic map(samples_to_avg =>512)
          port map(
                   clk       => clk,
                   reset     => reset,
@@ -127,8 +153,8 @@ begin
 mult : multiplexor
 		  port map(
 					  selectLine => selectSig,
-					  input1	 => voltage,
-					  input2     => distance_output,
+					  input1	 	 => distance_output,
+					  input2     => voltage,
 					  muxOutput  => mux_out
 					  );
 					  
