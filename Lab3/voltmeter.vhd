@@ -7,7 +7,8 @@ entity Voltmeter is
            reset                         : in  STD_LOGIC;
            LEDR                          : out STD_LOGIC_VECTOR (9 downto 0);
            HEX0,HEX1,HEX2,HEX3,HEX4,HEX5 : out STD_LOGIC_VECTOR (7 downto 0);
-			  selectSig							  : in STD_LOGIC
+			  selectSig							  : in STD_LOGIC;
+			  shortEnable						  : in STD_LOGIC
           );
            
 end Voltmeter;
@@ -90,7 +91,8 @@ component voltage2distance is
 			clk            :  IN    STD_LOGIC;                                
 			reset          :  IN    STD_LOGIC;                                
 			voltage        :  IN    STD_LOGIC_VECTOR(12 DOWNTO 0);                           
-			distance       :  OUT   STD_LOGIC_VECTOR(12 DOWNTO 0)
+			distance       :  OUT   STD_LOGIC_VECTOR(12 DOWNTO 0);
+			shortEnable		: 	IN 	STD_LOGIC
 	);
 	end component;
 
@@ -226,7 +228,8 @@ Port Map (
 			clk			=>   	clk,                 
 			reset       =>      reset,     
 			voltage 	=>		voltage,
-			distance 	=>		distance_output
+			distance 	=>		distance_output,
+			shortEnable => shortEnable
 );
  
 LEDR(9 downto 0) <= Q_temp1(11 downto 2); -- gives visual display of upper binary bits to the LEDs on board

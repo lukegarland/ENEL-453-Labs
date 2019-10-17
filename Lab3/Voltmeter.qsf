@@ -255,7 +255,7 @@ set_location_assignment PIN_A11 -to LEDR[8]
 set_location_assignment PIN_B11 -to LEDR[9]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to reset -entity DE10_LITE
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to selectSig -entity DE10_LITE
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[2] -entity DE10_LITE
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to shortEnable -entity DE10_LITE
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[3] -entity DE10_LITE
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[4] -entity DE10_LITE
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[5] -entity DE10_LITE
@@ -265,7 +265,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[8] -entity DE10_L
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9] -entity DE10_LITE
 set_location_assignment PIN_C10 -to reset
 set_location_assignment PIN_C11 -to selectSig
-set_location_assignment PIN_D12 -to SW[2]
+set_location_assignment PIN_D12 -to shortEnable
 set_location_assignment PIN_C12 -to SW[3]
 set_location_assignment PIN_A12 -to SW[4]
 set_location_assignment PIN_B12 -to SW[5]
