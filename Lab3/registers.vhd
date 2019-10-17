@@ -25,13 +25,13 @@ begin
    process (clk)
    begin
 		if (rising_edge(clk)) then
-		   if reset = '1' then
+			if reset = '1' then
 				q_outputs <= (others=>'0');
 			end if;
-		   if (enable = '1') then
-            q_outputs <= d_inputs;
+			if (enable = '1') then
+				q_outputs <= d_inputs;
 			end if;
-      end if;
+		end if;
    end process;
 
 end;
