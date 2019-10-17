@@ -38,11 +38,7 @@ variable temp_values: 	integer := 0;
 				regs(i) 	<= (others => '0');
 			end loop reset_loop;
 			
-			
 			Q <= (others => '0');
-			
-			
-			
 			
 		elsif rising_edge(clk) then
 			if EN = '1' then
