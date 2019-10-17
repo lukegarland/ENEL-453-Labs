@@ -6,10 +6,10 @@ use ieee.numeric_std.all;
 entity error_ctrl is
 
 port( 
-		DP_in                   			: out  STD_LOGIC_VECTOR (5 downto 0);
+		DP_in                   	: out  STD_LOGIC_VECTOR (5 downto 0);
 		Num_Hex0, Num_Hex1, Num_Hex2, Num_Hex3, Num_Hex4, Num_Hex5		: out STD_LOGIC_VECTOR (3 downto 0);
 		bcd 								: in std_logic_vector(15 downto 0);
-		voltage_mode 						: in std_logic
+		voltage_mode 					: in std_logic
     );
 end entity;
 
@@ -48,7 +48,7 @@ begin
 				-- Decimal location for distance mode
 				DP_in <=  "000100";
 			else 
-				DP_in <= "001000";-- position of the decimal point in the display
+				DP_in <= "001000";-- position of the decimal point in the display for voltage
 			end if;
 
 		end if;

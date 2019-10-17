@@ -349,7 +349,8 @@ set_location_assignment PIN_AA20 -to ARDUINO_IO[15]
 set_location_assignment PIN_F16 -to ARDUINO_RESET_N
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name OPTIMIZATION_MODE BALANCED
+set_global_assignment -name OPTIMIZATION_MODE "AGGRESSIVE PERFORMANCE"
+set_global_assignment -name VHDL_FILE error_ctrl.vhd
 set_global_assignment -name VHDL_FILE sync_regs.vhd
 set_global_assignment -name VHDL_FILE voltage2distance.vhd
 set_global_assignment -name VHDL_FILE generic_averager.vhd

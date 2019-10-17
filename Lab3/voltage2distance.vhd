@@ -10,7 +10,8 @@ ENTITY voltage2distance IS
       reset          :  IN    STD_LOGIC;
       voltage        :  IN    STD_LOGIC_VECTOR(12 DOWNTO 0);                           
       distance       :  OUT   STD_LOGIC_VECTOR(12 DOWNTO 0);
-		shortEnable    :  IN 	STD_LOGIC		);
+		shortEnable    :  IN 	STD_LOGIC		
+		);
 END voltage2distance;
 
 ARCHITECTURE behavior OF voltage2distance IS

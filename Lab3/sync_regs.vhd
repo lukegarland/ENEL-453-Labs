@@ -20,8 +20,7 @@ architecture Behavioral of sync_registers is
 
 Component registers is
    generic(bits : integer);
-   port
-     ( 
+   port ( 
       clk       : in  std_logic;
       reset     : in  std_logic;
       enable    : in  std_logic;
