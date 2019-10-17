@@ -59,7 +59,7 @@ begin
                               if (bcd_signal(20 downto 17) >4) then
                                  bcd_signal <= bcd_signal+ add3_1digit;
                               end if;
-
+								
                               NextState:=S4;
                   when S4 => 
                               if (bcd_signal(16 downto 13) >4) then
