@@ -100,8 +100,15 @@ architecture Behaviour of Lab4_Wave_Gen is
 		);
 	end component;
 
-
-
+	component SquareWaveGenerator is
+		Port(
+			CLK                        : in STD_LOGIC;
+			reset                      : in STD_LOGIC;
+			amplitudeOrFrequencySelect : in STD_LOGIC;
+			genericAvergerorValue      : in STD_LOGIC_VECTOR(11 downto 0);
+			digitalWaveValue           : out STD_LOGIC_VECTOR(8 downto 0)
+		);
+	end component;
 
 
 	--use these signals for switch and button inputs as 
@@ -117,6 +124,9 @@ architecture Behaviour of Lab4_Wave_Gen is
 	signal analogue_value_to_dac	: std_logic_vector(8 downto 0);
 	signal next_value_to_LUT 		: std_logic_vector(8 downto 0);
 	signal wave_value_from_LUT		: std_logic_vector(8 downto 0);
+	signal digitalWaveValue       : std_logic_vector(11 downto 0);
+	signal value_output				: std_logic_vector(11 downto 0);
+	signal valueToDAC					: std_logic_vector(8 downto 0);
 	
 begin 
 
@@ -126,7 +136,7 @@ begin
 						port map(
 								clk				=>	clk,
 								reset           =>	reset_sync,             
-								value_output    =>	open,             
+								value_output    =>	value_output,             
 								HEX0			=>	HEX0,
 								HEX1			=>	HEX1,
 								HEX2			=>	HEX2,
@@ -196,6 +206,24 @@ begin
 								input_value		=> analogue_value_to_dac,
 								output_voltage 	=> DAC_1_Out
 							);
+	
+	DAC_2: 					DAC 
+							port map (
+								reset			=> reset_sync,
+								clk				=> clk,
+								input_value		=> valueToDAC,
+								output_voltage 	=> DAC_2_Out
+							);
+							
+	SquareWaveGenerator_ins: SquareWaveGenerator
+							port map (
+								CLK => CLK,
+								reset => reset,
+								amplitudeOrFrequencySelect => amp_freq_select,
+								genericAvergerorValue => value_output,
+								digitalWaveValue => valueToDAC
+								);
+								
 										
 							
 end Behaviour;

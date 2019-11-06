@@ -321,7 +321,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[4]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[5]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[6]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DAC_1_OUT
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DAC_2_OUT
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[9]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[10]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[11]
@@ -338,7 +338,7 @@ set_location_assignment PIN_AB9 -to ARDUINO_IO[4]
 set_location_assignment PIN_Y10 -to ARDUINO_IO[5]
 set_location_assignment PIN_AA11 -to ARDUINO_IO[6]
 set_location_assignment PIN_AA12 -to DAC_1_OUT
-set_location_assignment PIN_AB17 -to ARDUINO_IO[8]
+set_location_assignment PIN_AB17 -to DAC_2_OUT
 set_location_assignment PIN_AA17 -to ARDUINO_IO[9]
 set_location_assignment PIN_AB19 -to ARDUINO_IO[10]
 set_location_assignment PIN_AA19 -to ARDUINO_IO[11]
