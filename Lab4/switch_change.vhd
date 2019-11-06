@@ -4,8 +4,8 @@ use ieee.numeric_std.all;
 
 entity switch_change is
     Port ( 	
-			clk                           	: in std_logic;
-			reset                         	: in std_logic;
+			clk                        : in std_logic;
+			reset                      : in std_logic;
 			freq_up							: in std_logic;
 			freq_dn							: in std_logic;
 			amp_up							: in std_logic;

@@ -4,19 +4,19 @@ use ieee.numeric_std.all;
 
 entity Synchronize_inputs is
     Port ( 	
-			clk                           	: in std_logic;
-			reset                         	: in std_logic;
-			amp_freq_select					: in std_logic;
+			clk                        : in std_logic;
+			reset                      : in std_logic;
+			amp_freq_select			   : in std_logic;
 			freq_up							: in std_logic;
 			freq_dn							: in std_logic;
 			amp_up							: in std_logic;
 			amp_dn							: in std_logic;
 			wave_select						: in std_logic_vector(1 downto 0);
 		
-			reset_sync                     	: inout std_logic;
+			reset_sync                 : inout std_logic;
 			amp_freq_select_sync			: out std_logic;
-			freq_up_sync_pulse				: out std_logic;
-			freq_dn_sync_pulse				: out std_logic;
+			freq_up_sync_pulse		   : out std_logic;
+			freq_dn_sync_pulse		   : out std_logic;
 			amp_up_sync_pulse				: out std_logic;
 			amp_dn_sync_pulse				: out std_logic;
 			wave_select_sync				: out std_logic_vector(1 downto 0)
@@ -32,9 +32,9 @@ component sync_registers is
 	generic(bits : integer := 1;
 			num_of_registers: integer := 2);
 	Port (
-			clk       : in  std_logic;
-			reset     : in  std_logic;
-			enable    : in  std_logic;
+			clk      : in  std_logic;
+			reset    : in  std_logic;
+			enable   : in  std_logic;
 			d_input  : in  std_logic_vector(bits-1 downto 0);
 			q_output : out std_logic_vector(bits-1 downto 0)	
 	);
@@ -50,8 +50,8 @@ signal amp_dn_sync	: std_logic;
 
 component switch_change is 
     Port ( 	
-			clk                           	: in std_logic;
-			reset                         	: in std_logic;
+			clk                        : in std_logic;
+			reset                      : in std_logic;
 			freq_up							: in std_logic;
 			freq_dn							: in std_logic;
 			amp_up							: in std_logic;
