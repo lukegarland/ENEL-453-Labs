@@ -320,7 +320,7 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[3]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[4]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[5]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to DAC_1_OUT
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[8]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[9]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ARDUINO_IO[10]
@@ -337,7 +337,7 @@ set_location_assignment PIN_AB8 -to ARDUINO_IO[3]
 set_location_assignment PIN_AB9 -to ARDUINO_IO[4]
 set_location_assignment PIN_Y10 -to ARDUINO_IO[5]
 set_location_assignment PIN_AA11 -to ARDUINO_IO[6]
-set_location_assignment PIN_AA12 -to ARDUINO_IO[7]
+set_location_assignment PIN_AA12 -to DAC_1_OUT
 set_location_assignment PIN_AB17 -to ARDUINO_IO[8]
 set_location_assignment PIN_AA17 -to ARDUINO_IO[9]
 set_location_assignment PIN_AB19 -to ARDUINO_IO[10]
@@ -352,6 +352,7 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name OPTIMIZATION_MODE "HIGH PERFORMANCE EFFORT"
 set_global_assignment -name VHDL_FILE downcounter.vhd
 set_global_assignment -name VHDL_FILE DAC.vhd
+set_global_assignment -name VHDL_FILE output_control.vhd
 set_global_assignment -name VHDL_FILE synchronize_inputs.vhd
 set_global_assignment -name VHDL_FILE switch_change.vhd
 set_global_assignment -name QIP_FILE ../Lab3/adc_qsys/synthesis/adc_qsys.qip
