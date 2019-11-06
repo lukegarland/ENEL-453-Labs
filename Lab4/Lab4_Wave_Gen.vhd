@@ -60,6 +60,50 @@ architecture Behaviour of Lab4_Wave_Gen is
 	end component;
 
 
+	component DAC is 
+		Generic ( width : integer := 9);
+		Port ( reset : in STD_LOGIC;
+           clk : in STD_LOGIC;
+           input_value : in STD_LOGIC_VECTOR (width-1 downto 0);
+           output_voltage : out STD_LOGIC
+          );
+		  
+	end component;
+	
+
+	component output_control is 
+		Port(
+			clk                           	: in std_logic;
+			reset                         	: in std_logic;
+			freq_up							: in std_logic;
+			freq_dn							: in std_logic;
+			amp_up							: in std_logic;
+			amp_dn							: in std_logic;
+			
+			wave_value_in					: in std_logic_vector(8 downto 0);
+			wave_select						: in std_logic_vector(1 downto 0);
+			
+			next_value						: out std_logic_vector(8 downto 0);
+			wave_value_out					: out std_logic_vector(8 downto 0)
+         );
+           
+		   
+	end component;
+
+
+	component wave_LUTs is 
+		Port (
+			reset			: in std_logic;
+			value_in 		: in std_logic_vector(8 downto 0);
+			wave_select		: in std_logic_vector(1 downto 0);
+			wave_value		: out std_logic_vector(8 downto 0)
+		);
+	end component;
+
+
+
+
+
 	--use these signals for switch and button inputs as 
 	--they are syncronized and 
 	signal reset_sync				: std_logic;
@@ -70,7 +114,10 @@ architecture Behaviour of Lab4_Wave_Gen is
 	signal amp_dn_sync_pulse		: std_logic;
 	signal wave_select_sync			: std_logic_vector(1 downto 0);
 
-
+	signal analogue_value_to_dac	: std_logic_vector(8 downto 0);
+	signal next_value_to_LUT 		: std_logic_vector(8 downto 0);
+	signal wave_value_from_LUT		: std_logic_vector(8 downto 0);
+	
 begin 
 
 
@@ -111,6 +158,44 @@ begin
 								wave_select_sync		=> wave_select_sync
 							);
 
+					
+							
+	output_control_ins: 	output_control
+							port map(
+								clk                 => clk,
+								reset               => reset_sync,
+								freq_up				=> freq_up_sync_pulse,
+								freq_dn				=> freq_dn_sync_pulse,
+								amp_up				=> amp_up_sync_pulse,
+								amp_dn				=> amp_dn_sync_pulse,
+								
+								wave_value_in		=> wave_value_from_LUT,
+								wave_select			=> wave_select_sync,
+								
+								next_value			=> next_value_to_LUT,
+								wave_value_out		=> analogue_value_to_dac
+							
+							);
+			
 
 
+	wave_LUTs_ins:			wave_LUTs
+							port map(
+								reset 		=> reset_sync,
+								value_in	=> next_value_to_LUT,
+								wave_select => wave_select_sync,
+								wave_value  => wave_value_from_LUT
+								
+							);
+							
+							
+	DAC_1: 					DAC 
+							port map (
+								reset			=> reset_sync,
+								clk				=> clk,
+								input_value		=> analogue_value_to_dac,
+								output_voltage 	=> DAC_1_Out
+							);
+										
+							
 end Behaviour;
