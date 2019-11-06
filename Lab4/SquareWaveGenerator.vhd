@@ -64,7 +64,6 @@ process(amplitudeOrFrequencySelect, genericAvergerorValue)
 	if(rising_edge(CLK)) then
 		if (reset = '1') then
 			digitalWaveValue <= (others => '0');
-			indexForLUT <= (others => '0');
 		else
 			if (amplitudeOrFrequencySelect = '1') then
 				periodInternal <= "100000000000";
