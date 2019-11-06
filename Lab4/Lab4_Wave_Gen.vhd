@@ -4,9 +4,9 @@ use ieee.numeric_std.all;
 
 entity Lab4_Wave_Gen is
     Port ( 	
-			clk                           	: in std_logic;
-			reset                         	: in std_logic;
-			amp_freq_select					: in std_logic;
+			clk                        : in std_logic;
+			reset                      : in std_logic;
+			amp_freq_select				: in std_logic;
 			freq_up							: in std_logic;
 			freq_dn							: in std_logic;
 			amp_up							: in std_logic;

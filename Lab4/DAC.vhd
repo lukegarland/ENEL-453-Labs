@@ -12,7 +12,7 @@ entity DAC is
 end DAC;
 
 architecture Behavioral of DAC is
-    signal counter : STD_LOGIC_VECTOR (9 downto 0);
+    signal counter : STD_LOGIC_VECTOR (8 downto 0);
         
 begin
     count : process(clk,reset)
