@@ -59,7 +59,7 @@ signal wave_value_from_mux:  std_logic_vector(8 downto 0);
 
 begin
 
-	process(reset, value_in, wave_select)
+	process(reset, wave_value_from_mux, wave_select)
 	begin
 
 	if(reset = '1') then

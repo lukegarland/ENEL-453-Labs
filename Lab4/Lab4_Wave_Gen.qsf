@@ -350,6 +350,10 @@ set_location_assignment PIN_F16 -to ARDUINO_RESET_N
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name OPTIMIZATION_MODE "HIGH PERFORMANCE EFFORT"
+set_global_assignment -name VHDL_FILE wave_LUTs.vhd
+set_global_assignment -name VHDL_FILE Mux4to1.vhd
+set_global_assignment -name VHDL_FILE downcounter_16.vhd
+set_global_assignment -name VHDL_FILE amplitude_frequency_step_control.vhd
 set_global_assignment -name VHDL_FILE downcounter.vhd
 set_global_assignment -name VHDL_FILE DAC.vhd
 set_global_assignment -name VHDL_FILE output_control.vhd

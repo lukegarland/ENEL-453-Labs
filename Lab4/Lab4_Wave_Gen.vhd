@@ -105,7 +105,7 @@ architecture Behaviour of Lab4_Wave_Gen is
 			CLK                        : in STD_LOGIC;
 			reset                      : in STD_LOGIC;
 			amplitudeOrFrequencySelect : in STD_LOGIC;
-			genericAvergerorValue      : in STD_LOGIC_VECTOR(11 downto 0);
+			genericAveragerValue      : in STD_LOGIC_VECTOR(11 downto 0);
 			digitalWaveValue           : out STD_LOGIC_VECTOR(8 downto 0)
 		);
 	end component;
@@ -170,7 +170,7 @@ begin
 
 					
 							
-	output_control_ins: 	output_control
+	PWM_waveforms_output_control_ins: 	output_control
 							port map(
 								clk                 => clk,
 								reset               => reset_sync,
@@ -219,8 +219,8 @@ begin
 							port map (
 								CLK => CLK,
 								reset => reset,
-								amplitudeOrFrequencySelect => amp_freq_select,
-								genericAvergerorValue => value_output,
+								amplitudeOrFrequencySelect => amp_freq_select_sync,
+								genericAveragerValue => value_output,
 								digitalWaveValue => valueToDAC
 								);
 								

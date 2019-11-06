@@ -9,7 +9,7 @@ entity SquareWaveGenerator is
 			CLK                        : in STD_LOGIC;
 			reset                      : in STD_LOGIC;
 			amplitudeOrFrequencySelect : in STD_LOGIC;
-			genericAvergerorValue      : in STD_LOGIC_VECTOR(11 downto 0);
+			genericAveragerValue      : in STD_LOGIC_VECTOR(11 downto 0);
 			digitalWaveValue           : out STD_LOGIC_VECTOR(8 downto 0)
 		);
 end SquareWaveGenerator;
@@ -49,7 +49,7 @@ adjustableDownCounter_INS : adjustableDownCounter
 				zero => enableForIndexIncrementing
 				);
 				
-process(enableForIndexIncrementing)
+process(clk, enableForIndexIncrementing, indexForLUT)
 	begin
 		if(rising_edge(CLK)) then
 			if (enableForIndexIncrementing = '1') then
@@ -61,7 +61,7 @@ process(enableForIndexIncrementing)
 end process;
 
 
-process(amplitudeOrFrequencySelect, genericAvergerorValue)
+process(clk, amplitudeOrFrequencySelect, genericAveragerValue, indexForLUT)
 	begin
 	if(rising_edge(CLK)) then
 		if (reset = '1') then
@@ -69,9 +69,9 @@ process(amplitudeOrFrequencySelect, genericAvergerorValue)
 		else
 			if (amplitudeOrFrequencySelect = '1') then
 				periodInternal <= Herz440;
-				digitalWaveValue <= std_logic_vector(to_unsigned(squareWaveLUT(to_integer(unsigned(indexForLUT))) * (to_integer(unsigned(genericAvergerorValue)))*512/(2048),digitalWaveValue'length));
+				digitalWaveValue <= std_logic_vector(to_unsigned(squareWaveLUT(to_integer(unsigned(indexForLUT))) * (to_integer(unsigned(genericAveragerValue)))*512/(2048),digitalWaveValue'length));
 			else
-				periodInternal <= std_logic_vector(to_unsigned(to_integer(unsigned(genericAvergerorValue))*10000 / (4096),periodInternal'length));
+				periodInternal <= std_logic_vector(to_unsigned(to_integer(unsigned(genericAveragerValue))*10000 / (4096),periodInternal'length));
 				digitalWaveValue <= std_logic_vector(to_unsigned(squareWaveLUT(to_integer(unsigned(indexForLUT)))*511,digitalWaveValue'length));
 			end if;
 		end if;
