@@ -202,7 +202,7 @@ ADC_Conversion_ins:  ADC_Conversion  PORT MAP(      -- THIS NEEDS TO BE ADC_Conv
 value_output <= mux_out;
 -- in line below, can change the scaling factor (i.e. 2500), to calibrate the voltage reading to a reference voltmeter
 --NOW DISPLAYS RAW AVERAGER OUTPUT (add *2500*2/4096 to change back to voltage readings)
-voltage <= std_logic_vector(resize(unsigned(mux_out),voltage'length));  -- Converting ADC_read a 12 bit binary to voltage readable numbers 
+voltage <= std_logic_vector(resize(unsigned(mux_out)*2500*2/4096,voltage'length));  -- Converting ADC_read a 12 bit binary to voltage readable numbers 
 
 binary_bcd_ins: binary_bcd                               
    PORT MAP(

@@ -19,16 +19,16 @@ architecture Behavior of squareWaveGenerator is
 
 Signal enableForIndexIncrementing : STD_LOGIC;
 Signal indexForLUT                : STD_LOGIC_VECTOR(8 downto 0);
-Signal periodInternal 				 : STD_LOGIC_VECTOR(11 downto 0);
+Signal periodInternal 				 : STD_LOGIC_VECTOR(12 downto 0);
 
 type array_1d is array (0 to 511) of integer;
 constant squareWaveLUT : array_1d := (0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1, 1);
 
-constant Herz440 : STD_logic_vector(11 downto 0) := "000011011110";
+constant Herz440 : STD_logic_vector(12 downto 0) := "0000011011110";
 
 component adjustableDownCounter is
 	Port(
-			period : in STD_LOGIC_VECTOR(11 downto 0);
+			period : in STD_LOGIC_VECTOR(12 downto 0);
 			CLK    : in STD_LOGIC;
 			reset  : in STD_LOGIC;
          enable : in  STD_LOGIC; -- active-high enable
@@ -69,9 +69,10 @@ process(clk, amplitudeOrFrequencySelect, genericAveragerValue, indexForLUT)
 		else
 			if (amplitudeOrFrequencySelect = '1') then
 				periodInternal <= Herz440;
-				digitalWaveValue <= std_logic_vector(to_unsigned(squareWaveLUT(to_integer(unsigned(indexForLUT))) * (to_integer(unsigned(genericAveragerValue)))*512/(2048),digitalWaveValue'length));
+				digitalWaveValue <= std_logic_vector(to_unsigned(squareWaveLUT(to_integer(unsigned(indexForLUT))) * (to_integer(unsigned(genericAveragerValue)))*(512*(1780)/1024)/(4096),digitalWaveValue'length));
 			else
-				periodInternal <= std_logic_vector(to_unsigned(to_integer(unsigned(genericAveragerValue))*10000 / (4096),periodInternal'length));
+			
+				periodInternal <= std_logic_vector(to_unsigned(to_integer(unsigned(genericAveragerValue))*274/1024,periodInternal'length));
 				digitalWaveValue <= std_logic_vector(to_unsigned(squareWaveLUT(to_integer(unsigned(indexForLUT)))*511,digitalWaveValue'length));
 			end if;
 		end if;

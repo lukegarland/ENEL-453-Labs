@@ -5,7 +5,7 @@ use IEEE.math_real.ceil;
 use IEEE.math_real.log2;
 
 entity adjustableDownCounter is
-	PORT (  period : in  STD_LOGIC_VECTOR(11 downto 0); -- number to count (will be a value from the distance measurer)
+	PORT (  period : in  STD_LOGIC_VECTOR(12 downto 0); -- number to count (will be a value from the distance measurer)
 			  clk    : in  STD_LOGIC; -- clock to be divided
            reset  : in  STD_LOGIC; -- active-high reset
            enable : in  STD_LOGIC; -- active-high enable
@@ -15,7 +15,7 @@ entity adjustableDownCounter is
 end adjustableDownCounter;
 
 architecture Behavioral of adjustableDownCounter is
-signal current_count : STD_LOGIC_VECTOR(11 downto 0);
+signal current_count : STD_LOGIC_VECTOR(12 downto 0);
   
 BEGIN
    
@@ -25,7 +25,7 @@ BEGIN
           current_count <= (others => '0');
           zero          <= '0';
        elsif (enable = '1') then 
-          if (current_count = "000000000000") then
+          if (current_count = "0000000000000") then
             current_count <= std_logic_vector(to_unsigned(to_integer(unsigned(period)) - 1, current_count'length));
             zero          <= '1';
           else 
