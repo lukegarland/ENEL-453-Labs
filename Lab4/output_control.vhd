@@ -83,10 +83,6 @@ amplitude_frequency_control_ins: amplitude_frequency_step_control
 		frequency_step		=> frequency_step,
 		amplitude_step		=> amplitude_step
 	);
-
-
-
-
 	get_LUT_value: process(clk,reset) begin
 		if(rising_edge(clk)) then
 			-- look to see if next value must be fetched from LUT
@@ -114,13 +110,7 @@ amplitude_frequency_control_ins: amplitude_frequency_step_control
 	-- end process;
 	-- scale the amplitude according to the output from amplitude_frequency_control
 	scaled_amplitude <= to_integer(unsigned(wave_value_in)*amp_steps(to_integer(unsigned(amplitude_step))));
-
-	
 	
 	next_value <= next_value_i;
-	
-	
-
 
 end Behaviour;
-

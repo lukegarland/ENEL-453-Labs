@@ -24,8 +24,6 @@ signal response_valid_out_i1,response_valid_out_i2,response_valid_out_i3 : STD_L
 Signal bcd: STD_LOGIC_VECTOR(15 DOWNTO 0);
 Signal Q_temp1, mux_out : std_logic_vector(11 downto 0);
 
---SelectLine signal:
---signal selectSig : STD_LOGIC;
 
 Component SevenSegment is
     Port( Num_Hex0,Num_Hex1,Num_Hex2,Num_Hex3,Num_Hex4,Num_Hex5 : in  STD_LOGIC_VECTOR (3 downto 0);
@@ -88,16 +86,6 @@ Component Multiplexor is
 	 );
   end component;
 
-                          
--- Component averager is
-  -- port(
-    -- clk, reset : in std_logic;
-    -- Din : in  std_logic_vector(11 downto 0);
-    -- EN  : in  std_logic; -- response_valid_out
-    -- Q   : out std_logic_vector(11 downto 0)
-    -- );
-  -- end Component;
-
 begin
    Num_Hex0 <= bcd(3  downto  0); 
    Num_Hex1 <= bcd(7  downto  4);
@@ -118,16 +106,7 @@ begin
                   Q         => Q_temp1
                   );
    
--- ave :    averager
-         -- port map(
-                  -- clk       => clk,
-                  -- reset     => reset,
-                  -- Din       => q_outputs_2,
-                  -- EN        => response_valid_out_i3(0),
-                  -- Q         => Q_temp1
-                  -- );
-						
--- Multiplexor declaring code
+
 mult : multiplexor
 		  port map(
 					  selectLine => selectSig,

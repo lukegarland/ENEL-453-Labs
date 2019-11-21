@@ -54,10 +54,6 @@ begin
 	zero <= zeros_from_downcounters(to_integer(unsigned(frequency_select)));
 		
 
-
-
-
-
 end Behaviour;
 
 
