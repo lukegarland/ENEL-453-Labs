@@ -17,10 +17,10 @@ set_global_assignment -name SDC_FILE DE10_LITE.SDC
 # CLOCK
 #============================================================
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ADC_CLK_10
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk_in
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to MAX10_CLK2_50
 set_location_assignment PIN_N5 -to ADC_CLK_10
-set_location_assignment PIN_P11 -to clk_in
+set_location_assignment PIN_P11 -to clk
 set_location_assignment PIN_N14 -to MAX10_CLK2_50
 
 #============================================================
