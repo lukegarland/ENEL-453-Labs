@@ -28,7 +28,7 @@ begin
 				if (AM_FM_Select = '1') then
 					R2R_OUT <= sine_value_in;
 				else 
-					R2R_OUT <= std_logic_vector(to_signed(((to_integer(signed(sine_value_in)) * to_integer(unsigned(voltage_in))*883)/512)/4096), R2R_OUT'length));
+					R2R_OUT <= std_logic_vector(to_signed(((to_integer(signed(sine_value_in)) * to_integer(unsigned(voltage_in))*883)/512)/4096, R2R_OUT'length));
 				end if;
 			end if;
 			
