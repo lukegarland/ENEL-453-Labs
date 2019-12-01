@@ -1,0 +1,131 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_pro/18.1
+Emult
+Z0 w1574037120
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/Iman/Desktop/multiply001/simulation
+Z4 8C:/Users/Iman/Desktop/multiply001/MULT.vhd
+Z5 FC:/Users/Iman/Desktop/multiply001/MULT.vhd
+l0
+L42
+V>C0ZH=E:?[WmT`_oeCA092
+!s100 Ik8BUVH;gj1cj67CL<Ajc2
+Z6 OV;C;10.6d;65
+32
+Z7 !s110 1574045855
+!i10b 1
+Z8 !s108 1574045855.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Iman/Desktop/multiply001/MULT.vhd|
+Z10 !s107 C:/Users/Iman/Desktop/multiply001/MULT.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Asyn
+R1
+R2
+DEx4 work 4 mult 0 22 >C0ZH=E:?[WmT`_oeCA092
+l74
+L52
+VVL5h2K@FF6@eNDR]8KYFY1
+!s100 B<EmThmBLM8;dfWLAc7_@2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Emultiply
+Z13 w1574045813
+R1
+R2
+R3
+Z14 8C:/Users/Iman/Desktop/multiply001/multiply.vhd
+Z15 FC:/Users/Iman/Desktop/multiply001/multiply.vhd
+l0
+L4
+V0>o8]7Zbo3e2gfRX]0FT63
+!s100 E0J]^I_mINS5gohXePXeo1
+R6
+32
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Iman/Desktop/multiply001/multiply.vhd|
+Z17 !s107 C:/Users/Iman/Desktop/multiply001/multiply.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R1
+R2
+DEx4 work 8 multiply 0 22 0>o8]7Zbo3e2gfRX]0FT63
+l21
+L11
+Vlz^29m[VjlUHdNn?[BnZa3
+!s100 l?80XKZn6G76oX`4VjhYc1
+R6
+32
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Etb_multiply
+Z18 w1574045805
+Z19 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+Z20 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+Z21 8C:/Users/Iman/Desktop/multiply001/tb_MULT.vhd
+Z22 FC:/Users/Iman/Desktop/multiply001/tb_MULT.vhd
+l0
+L7
+Vo4b[J2K1f;BZ;069_J0g91
+!s100 Tfncnn=C[Cl96U:io452V3
+R6
+32
+R7
+!i10b 1
+R8
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Iman/Desktop/multiply001/tb_MULT.vhd|
+Z24 !s107 C:/Users/Iman/Desktop/multiply001/tb_MULT.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R19
+R20
+R1
+R2
+Z25 DEx4 work 11 tb_multiply 0 22 o4b[J2K1f;BZ;069_J0g91
+l24
+L10
+Z26 V?i<aT_S8Agi709i6`lRSK2
+Z27 !s100 kO2_F>PI>;n=Y:1Tg5?jH2
+R6
+32
+R7
+!i10b 1
+R8
+R23
+R24
+!i113 1
+R11
+R12

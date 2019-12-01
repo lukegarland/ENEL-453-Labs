@@ -1,0 +1,40 @@
+# Reading C:/intelFPGA_pro/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# OpenFile C:/Users/Iman/Desktop/multiply001/simulation/TEST_MULT.mpf
+# Loading project TEST_MULT
+# Compile of MULT.vhd was successful.
+# Compile of multiply.vhd was successful.
+# Compile of tb_MULT.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of MULT.vhd was successful.
+# Compile of multiply.vhd was successful.
+# Compile of tb_MULT.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.tb_multiply
+# vsim -gui work.tb_multiply 
+# Start time: 19:57:49 on Nov 17,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.tb_multiply(behavior)
+# Loading work.multiply(behavioral)
+# Loading work.mult(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading lpm.lpm_components
+# Loading lpm.lpm_hint_evaluation(body)
+# Loading lpm.lpm_mult(lpm_syn)
+add wave -position insertpoint sim:/tb_multiply/*
+run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_multiply
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_multiply/multiply_ins/mult_ins/lpm_mult_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_multiply/multiply_ins/mult_ins/lpm_mult_component
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_multiply/multiply_ins/mult_ins/lpm_mult_component
+# ** Note: pass
+#    Time: 1310720 ns  Iteration: 0  Instance: /tb_multiply
+# End time: 19:58:54 on Nov 17,2019, Elapsed time: 0:01:05
+# Errors: 0, Warnings: 4

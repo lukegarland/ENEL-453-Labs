@@ -1,0 +1,27 @@
+C:/Users/Iman/Desktop/multiply001/MULT.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Iman/Desktop/multiply001/MULT.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity MULT
+-- Compiling architecture SYN of mult
+
+} {} {}} C:/Users/Iman/Desktop/multiply001/tb_MULT.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Iman/Desktop/multiply001/tb_MULT.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity tb_multiply
+-- Compiling architecture behavior of tb_multiply
+
+} {} {}} C:/Users/Iman/Desktop/multiply001/multiply.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Iman/Desktop/multiply001/multiply.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.6d Compiler 2018.02 Feb 24 2018
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity multiply
+-- Compiling architecture behavioral of multiply
+
+} {} {}}

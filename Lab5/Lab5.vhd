@@ -8,7 +8,7 @@ port(
 		clk 			: in 	std_logic;
 		reset			: in 	std_logic;
 		AM_FM_Select	: in 	std_logic;
-		R2R_Output		: out 	std_logic_vector(4 downto 0);
+		R2R_Output		: out 	std_logic_vector(5 downto 0);
 		HEX0,HEX1,HEX2,HEX3,HEX4,HEX5 	: out STD_LOGIC_VECTOR (7 downto 0)
 );
 end Lab5;
@@ -34,7 +34,7 @@ architecture Behaviour of Lab5 is
 	Port (
 			reset			: in std_logic;
 			value_in 		: in std_logic_vector(15 downto 0);
-			sine_value		: out std_logic_vector(4 downto 0)
+			sine_value		: out std_logic_vector(5 downto 0)
 
 	);
 
@@ -44,10 +44,10 @@ architecture Behaviour of Lab5 is
 
 	Port (
 			reset				: in std_logic;
-			sine_value_in 		: in std_logic_vector(4 downto 0);
+			sine_value_in 		: in std_logic_vector(5 downto 0);
 			voltage_in		 	: in std_logic_vector(11 downto 0);
 			AM_FM_Select		: in std_logic;
-			R2R_OUT				: out std_logic_vector(4 downto 0)
+			R2R_OUT				: out std_logic_vector(5 downto 0)
 
 	);
 
@@ -82,13 +82,13 @@ architecture Behaviour of Lab5 is
 	signal voltage_value_output				: std_logic_vector(11 downto 0);
 	signal reset_sync, AM_FM_Select_sync	: std_logic;
 	signal Sine_Index						: std_logic_vector(15 downto 0);
-	signal R2R_Output_i, sine_value			: std_logic_vector(4 downto 0);
+	signal R2R_Output_i, sine_value			: std_logic_vector(5 downto 0);
 	
 	
 begin
 
 
-	R2R_Output <= std_logic_vector(resize(signed(R2R_Output_i)+16, R2R_Output'length));
+	R2R_Output <= R2R_Output_i;
 	
 	Amp_Modulation_ins: Amp_Modulation
 						port map(
